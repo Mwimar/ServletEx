@@ -9,5 +9,6 @@ public class App
         System.out.println( "Hey YAll!" );
         Tomcat tomcat = new Tomcat();
         tomcat.start();
+        tomcat.getServer().await();
     }
 }
