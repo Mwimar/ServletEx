@@ -13,6 +13,7 @@ public class App
         tomcat.getServer().await();
 
         Context context = tomcat.addContext("",null);
+        Tomcat.addServlet(context,"HeyServlet", new HeyServlet());
 
     }
 }
