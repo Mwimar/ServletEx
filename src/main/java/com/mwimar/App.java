@@ -9,11 +9,14 @@ public class App
     public static void main( String[] args ) throws LifecycleException {
         System.out.println( "Hey YAll!" );
         Tomcat tomcat = new Tomcat();
-        tomcat.start();
-        tomcat.getServer().await();
+        
 
         Context context = tomcat.addContext("",null);
         Tomcat.addServlet(context,"HeyServlet", new HeyServlet());
+        context.addServletMappingDecoded("/hey","HeyServlet");
+
+        tomcat.start();
+        tomcat.getServer().await();
 
     }
 }
