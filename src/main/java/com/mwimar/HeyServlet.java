@@ -1,4 +1,6 @@
 package com.mwimar;
 
-public class HeyServlet {
+import javax.servlet.http.HttpServlet;
+
+public class HeyServlet extends HttpServlet {
 }
