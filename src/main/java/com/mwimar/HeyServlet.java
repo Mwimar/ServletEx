@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class HeyServlet extends HttpServlet {
-    public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
         System.out.println("In Service");
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
