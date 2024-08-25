@@ -9,7 +9,8 @@ import java.io.PrintWriter;
 public class HeyServlet extends HttpServlet {
     public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
         System.out.println("In Service");
+        res.setContentType("text/html");
         PrintWriter out = res.getWriter();
-        out.println("We are Up");
+        out.println("<h2>We are Up</h2>");
     };
 }
