@@ -3,9 +3,11 @@ package com.mwimar;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 public class HeyServlet extends HttpServlet {
-    public void service(HttpServletRequest req, HttpServletResponse res){
+    public void service(HttpServletRequest req, HttpServletResponse res) throws IOException {
         System.out.println("In Service");
+        res.getWriter().println("We are Up");
     };
 }
